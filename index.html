@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Metadados básicos para compatibilidade e responsividade -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Projeto — Renata Martins</title>
+  <!-- Fonte Roboto usada em todo o projeto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Material Symbols Outlined para ícones -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- Ligação com o arquivo de estilos CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Home</a></li>
+        <li><a href="#projetos">Competências</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button id="btn-tema" aria-pressed="false"><span class="icon">☾</span>Modo Escuro</button>
+    </nav>
+  </header>
+
+  <main>
+  
+    <section>
+          <!-- Seção de apresentação pessoal -->
+     <h1>Olá, sou Mundo Dev!</h1>  
+             <!-- Carrossel de imagens -->
+      <div class="carousel-container">
+        <div class="carousel">
+          <img src="img/1-amelie-mourichon-wusOJ-2uY6w-unsplash.jpg" alt="Imagem 1" class="carousel-image">
+          <img src="img/2-zainul-yasni-QiIxg_q2vh0-unsplash.jpg" alt="Imagem 2" class="carousel-image hidden">
+          <img src="img/3-christopher-gower-m_HRfLhgABo-unsplash.jpg" alt="Imagem 3" class="carousel-image hidden">
+          <img src="img/4-chris-ried-ieic5Tq8YMk-unsplash.jpg" alt="Imagem 4" class="carousel-image hidden">
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Imagem anterior">❮</button>
+        <button class="carousel-btn carousel-next" aria-label="Próxima imagem">❯</button>
+        <div class="carousel-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+          <span class="dot" data-slide="3"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção com os cards das unidades curriculares que leciono -->
+    <section id="projetos">
+      <h2>Minhas Competências</h2>
+      <div class="cards-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <span class="material-symbols-outlined icon-card">code</span>
+          <h3>Codificação para Front-End</h3>
+          <p>Desenvolvimento web com HTML, CSS e JavaScript.</p>
+          <button class="btn-detalhes" data-card="1">Saiba mais</button>
+          <div class="card-detalhes hidden" id="detalhes-1">
+            <h4>Principais Assuntos:</h4>
+            <ul>
+              <li>HTML5 e semântica</li>
+              <li>CSS3 e layouts responsivos</li>
+              <li>JavaScript ES6+</li>
+              <li>DOM e eventos</li>
+              <li>APIs e fetch</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <span class="material-symbols-outlined icon-card">architecture</span>
+          <h3>Modelagem de Sistemas</h3>
+          <p>Análise e design de sistemas de software.</p>
+          <button class="btn-detalhes" data-card="2">Saiba mais</button>
+          <div class="card-detalhes hidden" id="detalhes-2">
+            <h4>Principais Assuntos:</h4>
+            <ul>
+              <li>Diagramas UML</li>
+              <li>Casos de uso</li>
+              <li>Diagrama de classes</li>
+              <li>Análise de requisitos</li>
+              <li>Engenharia de software</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+          <span class="material-symbols-outlined icon-card">timeline</span>
+          <h3>Metodologias de Desenvolvimento de Projetos</h3>
+          <p>Metodologias ágeis e processos de desenvolvimento.</p>
+          <button class="btn-detalhes" data-card="3">Saiba mais</button>
+          <div class="card-detalhes hidden" id="detalhes-3">
+            <h4>Principais Assuntos:</h4>
+            <ul>
+              <li>Scrum e Kanban</li>
+              <li>Sprint planning</li>
+              <li>Retrospectivas</li>
+              <li>Daily standup</li>
+              <li>Gestão de riscos</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="card">
+          <span class="material-symbols-outlined icon-card">lightbulb</span>
+          <h3>Criatividade e Ideação em Projetos</h3>
+          <p>Técnicas de brainstorm e inovação.</p>
+          <button class="btn-detalhes" data-card="4">Saiba mais</button>
+          <div class="card-detalhes hidden" id="detalhes-4">
+            <h4>Principais Assuntos:</h4>
+            <ul>
+              <li>Técnicas de brainstorm</li>
+              <li>Design thinking</li>
+              <li>Mapa mental</li>
+              <li>Inovação aberta</li>
+              <li>Criação de conceitos</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="card">
+          <span class="material-symbols-outlined icon-card">dashboard</span>
+          <h3>Modelagem de Projetos</h3>
+          <p>Técnicas de estruturação de projetos.</p>
+          <button class="btn-detalhes" data-card="5">Saiba mais</button>
+          <div class="card-detalhes hidden" id="detalhes-5">
+            <h4>Principais Assuntos:</h4>
+            <ul>
+              <li>Canvas de modelo de negócio</li>
+              <li>Estrutura de projeto</li>
+              <li>Definição de escopo</li>
+              <li>Cronograma e orçamento</li>
+              <li>Estuturas organizacionais</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="card">
+          <span class="material-symbols-outlined icon-card">design_services</span>
+          <h3>Prototipagem de Projetos</h3>
+          <p>Criação de protótipos e wireframes.</p>
+          <button class="btn-detalhes" data-card="6">Saiba mais</button>
+          <div class="card-detalhes hidden" id="detalhes-6">
+            <h4>Principais Assuntos:</h4>
+            <ul>
+              <li>Wireframes e mockups</li>
+              <li>Ferramentas de prototipagem</li>
+              <li>Design de interface</li>
+              <li>Experiência do usuário</li>
+              <li>Testes com usuários</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="card">
+          <span class="material-symbols-outlined icon-card">build</span>
+          <h3>Implementação de Projetos</h3>
+          <p>Execução e entrega de projetos.</p>
+          <button class="btn-detalhes" data-card="7">Saiba mais</button>
+          <div class="card-detalhes hidden" id="detalhes-7">
+            <h4>Principais Assuntos:</h4>
+            <ul>
+              <li>Execução de tarefas</li>
+              <li>Controle de qualidade</li>
+              <li>Testes de funcionalidade</li>
+              <li>Deploy e entrega</li>
+              <li>Monitoramento pós-lançamento</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de contato com botão para exibir o e-mail -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <button id="btn-contato" aria-expanded="false" aria-controls="info-contato">Clique para ver meu e-mail</button>
+      <p id="info-contato" class="hidden">seuemail@exemplo.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por Renata Martins — SENAI Bahia 2025</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
