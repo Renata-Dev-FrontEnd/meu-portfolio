@@ -1,0 +1,331 @@
+/* VARIÁVEIS DE CORES */
+:root {
+  /* Cores e fonte principais da página */
+  --cor-primaria: #1F4E79;
+  --cor-destaque: #C55A11;
+  --cor-fundo:    #F5F5F5;
+  --fonte-principal: 'Roboto', sans-serif;
+}
+
+/* RESET BÁSICO */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { 
+  font-size: 93.75%;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Tipografia e cores de fundo para todo o site */
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: #333;
+  padding-top: 4.5rem;
+  padding-bottom: 3.5rem; /* espaço reservado para footer fixo */
+}
+
+/* HEADER */
+header { 
+  background-color: var(--cor-primaria); 
+  padding: 1rem 2rem; 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav { display: flex; align-items: center; gap: 1rem; }
+
+nav ul { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; }
+
+nav > button { margin-left: auto; }
+
+nav a { color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+nav a:hover { color: var(--cor-destaque); }
+
+/* SEÇÕES */
+section { 
+  padding: 2rem 2rem; 
+  max-width: 900px; 
+  margin: 0 auto; 
+  scroll-margin-top: 4.5rem;
+}
+
+/* TÍTULOS */
+h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 0.5;
+}
+
+/* CARROSSEL DE IMAGENS */
+.carousel-container {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 1rem;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+  display: block;
+}
+
+.carousel-image.hidden {
+  display: none;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-prev {
+  left: 1rem;
+}
+
+.carousel-next {
+  right: 1rem;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* CARDS DE UNIDADES CURRICULARES */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icon-card {
+  font-size: 3rem;
+  color: #5b8dc4;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.card h3 {
+  color: var(--cor-primaria);
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.btn-detalhes {
+  background-color: var(--cor-destaque);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.btn-detalhes:hover {
+  opacity: 0.85;
+}
+
+.card-detalhes {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.card-detalhes h4 {
+  color: var(--cor-primaria);
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.card-detalhes ul {
+  list-style-position: inside;
+  color: #555;
+  line-height: 1.8;
+}
+
+.card-detalhes li {
+  margin-bottom: 0.5rem;
+}
+
+/* Classe utilitária para ocultar conteúdo quando necessário */
+.hidden { display: none !important; }
+
+button { font-family: inherit; }
+
+/* BOTÃO */
+#btn-contato,
+#btn-tema {
+  /* Estilo compartilhado para botões de ação */
+  background-color: var(--cor-destaque);
+  color: #fff; border: none;
+  padding: 0.75rem 1.5rem; border-radius: 6px;
+  cursor: pointer; font-size: 1rem; transition: opacity 0.2s, background-color 0.2s;
+}
+
+#btn-tema .icon {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+#btn-contato:hover,
+#btn-tema:hover { opacity: 0.85; }
+
+/* ESTILO DO MODO ESCURO */
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Ajustes de cabeçalho e links no modo escuro */
+.dark-mode header { background-color: #17212b; }
+
+.dark-mode nav a { color: #e6e6e6; }
+
+/* Carrossel em modo escuro */
+.dark-mode .carousel-container {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .carousel {
+  background-color: #0d0d0d;
+}
+
+/* Cards em modo escuro */
+.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .icon-card {
+  color: #7ba7d4;
+}
+
+.dark-mode .card h3,
+.dark-mode .card-detalhes h4 {
+  color: #ffb347;
+}
+
+.dark-mode .card p,
+.dark-mode .card-detalhes ul {
+  color: #ccc;
+}
+
+.dark-mode .card-detalhes {
+  border-top-color: #333;
+}
+
+/* Botões com contraste agradável no modo escuro */
+.dark-mode #btn-contato,
+.dark-mode #btn-tema,
+.dark-mode .btn-detalhes {
+  background-color: #33658a;
+}
+
+/* FOOTER: fixo na base da janela, texto centralizado */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3.5rem;
+  background-color: var(--cor-primaria);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 900;
+}
+
+footer p { margin: 0; font-size: 0.95rem; }
+
+.dark-mode footer {
+  background-color: #0f2940;
+  color: #f0f0f0;
+}
